@@ -1,0 +1,13 @@
+<app-image-display [steps]=guessesLeft></app-image-display>
+
+<h1 style="letter-spacing: 5px;">{{hiddenWord}}</h1>
+
+<h2>{{messageToPlayer}}</h2>
+
+<app-letter-picker (selectLetters)="handleCharSelection($event)" [buttonState]="isGameFinished"></app-letter-picker>
+
+<div style="text-decoration: line-through;">
+@for (char of missedLetters; track char){
+    <span>{{char}}</span>
+}
+</div>

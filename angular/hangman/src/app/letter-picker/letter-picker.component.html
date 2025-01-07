@@ -1,0 +1,7 @@
+<div>
+    @for (char of letters; track char) {
+        <button (click)="chooseCharacter(char)" [disabled]="buttonState()" >
+            {{char}}
+        </button>
+    }
+</div>
